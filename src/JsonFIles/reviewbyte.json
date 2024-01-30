@@ -1,0 +1,260 @@
+[
+  {
+    "_id": {
+      "$oid": "65952724d87640e8d14e0865"
+    },
+    "name": "Parkdale Burger",
+    "city": "Adama",
+    "country": "Ethiopia",
+    "map": "https://maps.example.com/wow-burger",
+    "images": [
+      "wow.jpg",
+      "wow2.jpg"
+    ],
+    "video": "wow.mp4",
+    "services": [
+      "Burgers",
+      "Fries",
+      "Milkshakes",
+      "Soft Drinks"
+    ],
+    "description": "Welcome to Wow Burger, the best place in Addis Ababa to enjoy delicious burgers and more.",
+    "logo": "wowlogo.png",
+    "category": {
+      "$oid": "65946b7c77a11ab59811ec1f"
+    },
+    "subCategory": {
+      "$oid": "65946dc177a11ab59811ec40"
+    },
+    "reviewCount": 240,
+    "reviewScore": 3.2,
+    "website": "https://www.wowburger.com",
+    "phone": [
+      "+251-9-12345678",
+      "+251-9-87654321"
+    ],
+    "email": "info@wowburger.com",
+    "password": "hashed_password"
+  },
+  {
+    "_id": {
+      "$oid": "65952724d87640e8d14e0865"
+    },
+    "name": "Parkdale Burger",
+    "city": "Adama",
+    "country": "Ethiopia",
+    "map": "https://maps.example.com/wow-burger",
+    "images": [
+      "wow.jpg",
+      "wow2.jpg"
+    ],
+    "video": "wow.mp4",
+    "services": [
+      "Burgers",
+      "Fries",
+      "Milkshakes",
+      "Soft Drinks"
+    ],
+    "description": "Welcome to Wow Burger, the best place in Addis Ababa to enjoy delicious burgers and more.",
+    "logo": "wowlogo.png",
+    "category": {
+      "$oid": "65946b7c77a11ab59811ec1f"
+    },
+    "subCategory": {
+      "$oid": "65946dc177a11ab59811ec40"
+    },
+    "reviewCount": 240,
+    "reviewScore": 3.2,
+    "website": "https://www.wowburger.com",
+    "phone": [
+      "+251-9-12345678",
+      "+251-9-87654321"
+    ],
+    "email": "info@wowburger.com",
+    "password": "hashed_password"
+  },
+  {
+    "_id": {
+      "$oid": "65952724d87640e8d14e0865"
+    },
+    "name": "Parkdale Burger",
+    "city": "Adama",
+    "country": "Ethiopia",
+    "map": "https://maps.example.com/wow-burger",
+    "images": [
+      "wow.jpg",
+      "wow2.jpg"
+    ],
+    "video": "wow.mp4",
+    "services": [
+      "Burgers",
+      "Fries",
+      "Milkshakes",
+      "Soft Drinks"
+    ],
+    "description": "Welcome to Wow Burger, the best place in Addis Ababa to enjoy delicious burgers and more.",
+    "logo": "wowlogo.png",
+    "category": {
+      "$oid": "65946b7c77a11ab59811ec1f"
+    },
+    "subCategory": {
+      "$oid": "65946dc177a11ab59811ec40"
+    },
+    "reviewCount": 240,
+    "reviewScore": 3.2,
+    "website": "https://www.wowburger.com",
+    "phone": [
+      "+251-9-12345678",
+      "+251-9-87654321"
+    ],
+    "email": "info@wowburger.com",
+    "password": "hashed_password"
+  },
+  {
+    "_id": {
+      "$oid": "65952724d87640e8d14e0865"
+    },
+    "name": "Parkdale Burger",
+    "city": "Adama",
+    "country": "Ethiopia",
+    "map": "https://maps.example.com/wow-burger",
+    "images": [
+      "wow.jpg",
+      "wow2.jpg"
+    ],
+    "video": "wow.mp4",
+    "services": [
+      "Burgers",
+      "Fries",
+      "Milkshakes",
+      "Soft Drinks"
+    ],
+    "description": "Welcome to Wow Burger, the best place in Addis Ababa to enjoy delicious burgers and more.",
+    "logo": "wowlogo.png",
+    "category": {
+      "$oid": "65946b7c77a11ab59811ec1f"
+    },
+    "subCategory": {
+      "$oid": "65946dc177a11ab59811ec40"
+    },
+    "reviewCount": 240,
+    "reviewScore": 3.2,
+    "website": "https://www.wowburger.com",
+    "phone": [
+      "+251-9-12345678",
+      "+251-9-87654321"
+    ],
+    "email": "info@wowburger.com",
+    "password": "hashed_password"
+  },
+  {
+    "_id": {
+      "$oid": "65952724d87640e8d14e0865"
+    },
+    "name": "Parkdale Burger",
+    "city": "Adama",
+    "country": "Ethiopia",
+    "map": "https://maps.example.com/wow-burger",
+    "images": [
+      "wow.jpg",
+      "wow2.jpg"
+    ],
+    "video": "wow.mp4",
+    "services": [
+      "Burgers",
+      "Fries",
+      "Milkshakes",
+      "Soft Drinks"
+    ],
+    "description": "Welcome to Wow Burger, the best place in Addis Ababa to enjoy delicious burgers and more.",
+    "logo": "wowlogo.png",
+    "category": {
+      "$oid": "65946b7c77a11ab59811ec1f"
+    },
+    "subCategory": {
+      "$oid": "65946dc177a11ab59811ec40"
+    },
+    "reviewCount": 240,
+    "reviewScore": 3.2,
+    "website": "https://www.wowburger.com",
+    "phone": [
+      "+251-9-12345678",
+      "+251-9-87654321"
+    ],
+    "email": "info@wowburger.com",
+    "password": "hashed_password"
+  },
+  {
+    "_id": {
+      "$oid": "65952724d87640e8d14e0865"
+    },
+    "name": "Daye Burger",
+    "city": "Addis Ababa",
+    "country": "Ethiopia",
+    "map": "https://maps.example.com/wow-burger",
+    "images": [
+      "wow.jpg",
+      "wow2.jpg"
+    ],
+    "video": "wow.mp4",
+    "services": [
+      "Burgers",
+      "Fries",
+      "Milkshakes",
+      "Soft Drinks"
+    ],
+    "description": "Welcome to Wow Burger, the best place in Addis Ababa to enjoy delicious burgers and more.",
+    "logo": "wowlogo.png",
+    "category": {
+      "$oid": "65946b7c77a11ab59811ec1f"
+    },
+    "subCategory": {
+      "$oid": "65946dc177a11ab59811ec40"
+    },
+    "reviewCount": 32,
+    "reviewScore": 1.3,
+    "website": "https://www.wowburger.com",
+    "phone": [
+      "+251-9-12345678",
+      "+251-9-87654321"
+    ],
+    "email": "info@wowburger.com",
+    "password": "hashed_password"
+  },
+  {
+    "_id": {
+      "$oid": "65952724d87640e8d14e0865"
+    },
+    "name": "Wow Burger",
+    "city": "Addis Ababa",
+    "country": "Ethiopia",
+    "map": "https://maps.example.com/wow-burger",
+    "images": [
+      "wow.jpg",
+      "wow2.jpg"
+    ],
+    "video": "wow.mp4",
+    "services": [
+      "Burgers",
+      "Fries",
+      "Milkshakes",
+      "Soft Drinks"
+    ],
+    "description": "Welcome to Wow Burger, the best place in Addis Ababa to enjoy delicious burgers and more.",
+    "logo": "wowlogo.png",
+    "category": {
+      "$oid": "65946b7c77a11ab59811ec1f"
+    },
+    "subCategory": {
+      "$oid": "65946dc177a11ab59811ec40"
+    },
+    "reviewCount": 200,
+    "reviewScore": 4.2,
+    "website": "https://www.wowburger.com",
+    "phone": [
+      "+251-9-12345678",
+      "+251-9-87654321"
+    ],
+    "email": "info@wowburger.com",
+    "password": "hashed_password"
+  }]
