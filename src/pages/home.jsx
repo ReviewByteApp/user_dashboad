@@ -8,6 +8,8 @@ import { Loadingfile } from "../constants/loadingfile";
 import { Loading, Loading2 } from "../comp/loading";
 import StarIcon from "@mui/icons-material/Star";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { changeActive } from "../hooks/feature/activeSlice";
 
 const HomePage = () => {
   const [topChatagories, setTopChatagories] = React.useState(subCatagories);
@@ -16,6 +18,8 @@ const HomePage = () => {
   const [topSearchedData, setTopSearchedData] = useState([]);
   const [subSearchedData, setSubSearchedData] = useState([]);
   const [displaySearch, setDisplaySearch] = useState(false);
+  const dispatch = useDispatch();
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -43,9 +47,9 @@ const HomePage = () => {
       }
     };
     fetchData();
+    dispatch(changeActive("home"));
   }, [serachValue]);
 
-  
   return (
     <div className={"min-h-screen bg-[#F9F9F9]"}>
       <div
