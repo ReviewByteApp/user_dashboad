@@ -39,7 +39,9 @@ const HomePage = () => {
         setTopSearchedData(serachvalue.businessData);
         setSubSearchedData(serachvalue.subCategories);
         console.log("serachValue", serachvalue);
-      } catch (error) {}
+      } catch (error) {
+        console.error(error);
+      }
     };
     fetchData();
   }, [serachValue]);
@@ -68,11 +70,7 @@ const HomePage = () => {
               />
               <div
                 className={
-<<<<<<< HEAD
                   "absolute right-3 hover:opacity-90 curso bg-[#008cff] px-3 text-white font-semibold py-1 text top-2 rounded-md"
-=======
-                  "absolute right-3 hover:opacity-90 curso bg-blue-600 px-3 text-white font-semibold py-1 text top-2 rounded-xl"
->>>>>>> 33a82f0ee68265abc3c72d051f55f003a0e00e76
                 }
               >
                 search
@@ -81,11 +79,7 @@ const HomePage = () => {
             <div
               className={
                 displaySearch
-<<<<<<< HEAD
                   ? "py-3 pt-12 shadow-2xl left-0 -mt-10 z-50 bg-white w-full h-fit rounded-b-xl"
-=======
-                  ? "py-3 pt-12 shadow-2xl left-0 -mt-10 z-30 bg-white w-full h-fit rounded-b-xl"
->>>>>>> 33a82f0ee68265abc3c72d051f55f003a0e00e76
                   : "hidden"
               }
             >
@@ -218,8 +212,8 @@ const HomePage = () => {
               Your first choose
             </h1>
             <h1 className={"px-5 py-3 pt-3 text-base italic font-semibold"}>
-              "Review websites: the voice of the people, the compass of consumer
-              choice."
+              Review websites: the voice of the people, the compass of consumer
+              choice.
             </h1>
           </div>
         </div>
@@ -272,11 +266,7 @@ const HomePage = () => {
               {recentReview.map((item, index) => (
                 <li
                   key={index}
-<<<<<<< HEAD
                   className={"bg-white  p-[10px] rounded-[10px] border"}
-=======
-                  className={"bg-white p-[10px] rounded-[10px] border"}
->>>>>>> 33a82f0ee68265abc3c72d051f55f003a0e00e76
                 >
                   <div className="flex flex-row gap-2">
                     <img
@@ -285,13 +275,9 @@ const HomePage = () => {
                       alt="profile_image"
                     />
 
-<<<<<<< HEAD
                     <div className={"z-10"}>
-                    <Rating className={""} rating={item.rate} />
+                      <Rating className={""} rating={item.rate} />
                     </div>
-=======
-                    <Rating className={""} rating={item.rate} />
->>>>>>> 33a82f0ee68265abc3c72d051f55f003a0e00e76
                   </div>
                   <div className={"text-sm font-semibold my-3"}>
                     {item.customerName} reviwed{" "}
