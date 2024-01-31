@@ -9,9 +9,7 @@ const NavbarTop = () => {
   const activePage = useSelector((state) => state.active.value);
   return (
     <div
-      className={
-        " h-[80px] px-10 flex flex-row justify-between items-center"
-      }
+      className={" h-[80px] px-10 flex flex-row justify-between items-center"}
     >
       <Link to="/">
         <img src={Logo} alt="logo" className={"h-[50px] "} />
@@ -37,7 +35,7 @@ const NavbarTop = () => {
           onMouseLeave={() => setBloghover(false)}
           className={"list-none relative"}
         >
-          Blog
+          English
           <div
             className={
               bloghover || activePage === "blog"
