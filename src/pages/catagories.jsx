@@ -1,17 +1,23 @@
 import React, { useEffect, useState } from "react";
-import { catagoryData } from "../api/acceptApi";
 import { Colors } from "../utils/dataReterive";
 import { Icons } from "../utils/sample";
 import { useDispatch } from "react-redux";
 import { changeActive } from "../hooks/feature/activeSlice";
-import { Loadingfile } from "../constants/loadingfile";
 import { Loading } from "../comp/loading";
+import { catagoryData, searchPreview } from "../api/acceptApi";
+import { Loadingfile } from "../constants/loadingfile";
+import StarIcon from "@mui/icons-material/Star";
+import { Link } from "react-router-dom";
 
 const Catagories = () => {
   const [topChatagories, setTopChatagories] = useState([]);
   const [seeMore, setSeeMore] = useState([]);
   const [subcatValue, setSubcatValue] = useState([]);
   const dispatch = useDispatch();
+  const [serachValue, setSerachValue] = useState("");
+  const [topSearchedData, setTopSearchedData] = useState([]);
+  const [subSearchedData, setSubSearchedData] = useState([]);
+  const [displaySearch, setDisplaySearch] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -46,32 +52,163 @@ const Catagories = () => {
     setSeeMore(updatedSeeMore);
     setSubcatValue(updatedSubcatValue);
   };
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const serachvalue = await searchPreview({
+          searchvalue: `${serachValue}`,
+        });
+        setTopSearchedData(serachvalue.businessData);
+        setSubSearchedData(serachvalue.subCategories);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    fetchData();
+  }, [serachValue]);
 
   return (
     <div>
       <div className={"bg-[#008cff] w-screen px-auto  pt-[80px] h-[280px]"}>
-        <div className="text-white mx-auto w-fit">
-          <p className={"text-3xl font-semibold m-2"}>
+        <div className={"flex flex-col gap-4 mx-auto w-fit z-50"}>
+          <p className={"text-white font-bold text-2xl "}>
             What are you looking for?
           </p>
           <div
-            className={
-              "text-black bg-white flex flex-row justify-between px-2 w-[570px] py-2 rounded-md"
-            }
+            onMouseEnter={() => setDisplaySearch(true)}
+            onMouseLeave={() => setDisplaySearch(false)}
           >
-            <input
-              type="text"
-              name="input_value"
-              className={"w-[90%] border-0 outline-none focus:border-0 px-5 "}
-            />
-            <button
-              type="button"
+            <div className=" bg-white relative w-[500px] rounded-xl p-5 py-3">
+              <input
+                type="text"
+                className={"w-full outline-none"}
+                onChange={(e) => {
+                  setSerachValue(e.target.value || "");
+                }}
+              />
+              <div
+                className={
+                  "absolute right-3 hover:opacity-90 curso bg-[#008cff] px-3 text-white font-semibold py-1 text top-2 rounded-md"
+                }
+              >
+                search
+              </div>
+            </div>
+            <div
               className={
-                "text-white font-semibold bg-[#008cff] px-3 py-2 rounded-[10px]"
+                displaySearch
+                  ? "py-3 pt-12 shadow-2xl left-0 -mt-10 -z-50 bg-white w-full h-fit rounded-b-xl"
+                  : "hidden"
               }
             >
-              Search
-            </button>
+              <h1
+                className={
+                  "font-semibold px-5 border-t-[1px] border-slate-300 pt-3"
+                }
+              >
+                Companies
+              </h1>
+              <div className={"pb-3"}>
+                {topSearchedData.length > 0 ? (
+                  <div>
+                    {topSearchedData.slice(0, 5)?.map((item, index) => (
+                      <Link
+                        to={`/company/${item._id}`}
+                        key={index}
+                        className={
+                          "hover:bg-blue-200 cursor-pointer px-5 flex justify-between text-sm py-[3px] mt-2 flex-row"
+                        }
+                      >
+                        <div className={"flex flex-col gap-[1px]"}>
+                          <div className={"font-semibold"}>{item.name}</div>
+                          <div className={"flex flex-row gap-2"}>
+                            <div>{item.city}</div>,{" "}
+                            <div className={" flex flex-row gap-2"}>
+                              {item.country}
+                              <p
+                                className={
+                                  " bottom-0 mt-1  w-[2px] h-[60%] bg-slate-400"
+                                }
+                              ></p>
+                            </div>{" "}
+                            <div>{item.reviewCount} reviews</div>
+                          </div>
+                        </div>
+                        <div className={"flex flex-row gap-2 py-2"}>
+                          <div
+                            className={
+                              "bg-blue-500 h-fit mt-[4px] rounded-sm p-[1px]"
+                            }
+                          >
+                            <StarIcon
+                              style={{ color: "white" }}
+                              className={"text-xs"}
+                            />
+                          </div>
+                          <p className={"py-1 text-base font-sans"}>
+                            {item.reviewCount}
+                          </p>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                ) : (
+                  <div className={"px-5 text-center"}>
+                    <p
+                      className={
+                        "text-xs font-ubuntu text-blue-500 font-semibold"
+                      }
+                    >
+                      -- no data found --
+                    </p>
+                  </div>
+                )}
+              </div>
+              <h1
+                className={
+                  "font-semibold px-5 border-t-[1px] border-slate-300 pt-3"
+                }
+              >
+                Catagories
+              </h1>
+              <div className={"py-3 pt-0"}>
+                {subSearchedData.length > 0 ? (
+                  <div>
+                    {subSearchedData?.map((item, index) => (
+                      <div
+                        key={index}
+                        className={
+                          "hover:bg-blue-200 cursor-pointer px-5 flex justify-between text-sm py-[3px] mt-2 flex-row"
+                        }
+                      >
+                        <div className={"flex flex-col gap-[1px]"}>
+                          <div className={"font-semibold"}>{item.name}</div>
+                          <div className={"flex flex-row gap-2"}>
+                            <p className={"line-clamp-1 w-[450px]"}>
+                              Lorem ipsum, dolor sit amet consectetur
+                              adipisicing elit. Commodi a perferendis facilis
+                              illum aliquam repellendus iste, quaerat autem
+                              neque amet ratione magnam quisquam, qui similique
+                              sunt harum! Quidem, qui quasi?
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <div className={"px-5 text-center"}>
+                    <p
+                      className={
+                        "text-xs font-ubuntu text-blue-500 font-semibold"
+                      }
+                    >
+                      -- no data found --
+                    </p>
+                  </div>
+                )}
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -84,7 +221,7 @@ const Catagories = () => {
             <div className="flex flex-row flex-wrap px-10 my-5 py-5 justify-left gap-5  mt-10  w-full">
               {topChatagories?.map((category, index) => (
                 <li
-                  className="list-none relative pb-10 w-[280px] mt-3 border-2 h-fit shadow-md rounded-lg bg-white p-5"
+                  className="list-none  -z-10 relative pb-10 w-[280px] mt-3 border-2 h-fit shadow-md rounded-lg bg-white p-5"
                   key={category.catId}
                 >
                   <div

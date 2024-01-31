@@ -45,6 +45,7 @@ const HomePage = () => {
     fetchData();
   }, [serachValue]);
 
+  
   return (
     <div className={"min-h-screen bg-[#F9F9F9]"}>
       <div
@@ -52,7 +53,7 @@ const HomePage = () => {
           "relative flex flex-row justify-between h-[280px] pl-10 pt-20 p-10 bg-[#008cff]"
         }
       >
-        <div className={"flex flex-col gap-4"}>
+        <div className={"flex flex-col gap-4 z-10"}>
           <p className={"text-white font-bold text-2xl "}>where to?</p>
           <div
             onMouseEnter={() => setDisplaySearch(true)}
@@ -92,7 +93,7 @@ const HomePage = () => {
               <div className={"pb-3"}>
                 {topSearchedData.length > 0 ? (
                   <div>
-                    {topSearchedData?.map((item, index) => (
+                    {topSearchedData.slice(0, 5)?.map((item, index) => (
                       <Link
                         to={`/company/${item._id}`}
                         key={index}
@@ -274,7 +275,7 @@ const HomePage = () => {
                       alt="profile_image"
                     />
 
-                    <div className={"z-10"}>
+                    <div className={"z-0"}>
                       <Rating className={""} rating={item.rate} />
                     </div>
                   </div>
