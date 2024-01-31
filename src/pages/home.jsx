@@ -38,7 +38,6 @@ const HomePage = () => {
         });
         setTopSearchedData(serachvalue.businessData);
         setSubSearchedData(serachvalue.subCategories);
-        console.log("serachValue", serachvalue);
       } catch (error) {
         console.error(error);
       }
@@ -104,16 +103,16 @@ const HomePage = () => {
                         <div className={"flex flex-col gap-[1px]"}>
                           <div className={"font-semibold"}>{item.name}</div>
                           <div className={"flex flex-row gap-2"}>
-                            <p>{item.city}</p>,{" "}
-                            <p className={" flex flex-row gap-2"}>
+                            <div>{item.city}</div>,{" "}
+                            <div className={" flex flex-row gap-2"}>
                               {item.country}
                               <p
                                 className={
                                   " bottom-0 mt-1  w-[2px] h-[60%] bg-slate-400"
                                 }
                               ></p>
-                            </p>{" "}
-                            <p>{item.reviewCount} reviews</p>
+                            </div>{" "}
+                            <div>{item.reviewCount} reviews</div>
                           </div>
                         </div>
                         <div className={"flex flex-row gap-2 py-2"}>

@@ -11,9 +11,9 @@ const Companyreview = (reviewData) => {
   return (
     <div className={""}>
       <div className={" flex flex-row pl-10 text-sm justify-between mr-7"}>
-        <p>1-20 of 134 results</p>
+        <div>1-20 of 134 results</div>
         <div className={"flex flex-row gap-2"}>
-          <p> Sort by:</p>
+          <div> Sort by:</div>
           <div>
             {" "}
             <select className={"border"}>
@@ -45,8 +45,8 @@ const Companyreview = (reviewData) => {
                     }
                   ></div>
                   <div>
-                    <p>{item.name}</p>
-                    <p>{item.review_number} review</p>
+                    <div>{item.name}</div>
+                    <div>{item.review_number} review</div>
                   </div>
                 </div>
                 <div className={"flex flex-row gap-2 justify-start w-[250px]"}>

@@ -67,7 +67,7 @@ const Catagories = () => {
             <button
               type="button"
               className={
-                "text-white font-semibold bg-[#008cff]px-3 py-2 rounded-[10px]"
+                "text-white font-semibold bg-[#008cff] px-3 py-2 rounded-[10px]"
               }
             >
               Search

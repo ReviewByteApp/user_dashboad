@@ -149,7 +149,7 @@ const MainCat = () => {
             </select>
           </div>
           <div>
-            <p>Sub category</p>
+            <div>Sub category</div>
             <div className={"flex pt-4 flex-row flex-wrap gap-2"}>
               {subcategories.map((subcategory, index) => (
                 <li
@@ -214,7 +214,7 @@ const MainCat = () => {
                           Score {location.reviewScore}
                         </p>
                       </div>
-                      <p>{location.reviewCount} reviews</p>
+                      <div>{location.reviewCount} reviews</div>
                     </div>
                     <p className={"font-semibold"}>
                       {location.city} , {location.country}
